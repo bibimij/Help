@@ -9,7 +9,7 @@ class HelpCommand(sublime_plugin.WindowCommand):
 
 	def __init__(self,*args,**kwargs):
 		super(HelpCommand,self).__init__(*args,**kwargs)
-		defaultSettings={'PHP':'http://php.net/%s','jQuery':'http://api.jquery.com/?s=%s','Google':'http://google.com/?q=%s','Yandex':'http://yandex.ru/yandsearch?text=%s'}
+		defaultSettings={'PHP':'http://php.net/%s','jQuery':'http://api.jquery.com/?s=%s','Google':'http://google.com/#newwindow=1&q=%s','Yandex':'http://yandex.ru/yandsearch?text=%s'}
 		settings = sublime.load_settings('Help.sublime-settings') 
 		if not settings.has('urls'):
 			settings.set('urls',defaultSettings)
